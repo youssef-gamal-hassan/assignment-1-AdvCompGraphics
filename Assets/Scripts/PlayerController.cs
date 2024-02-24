@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] Transform playerCamera = null;
     [SerializeField] float mouseSensitivity = 3.5f;
-    [SerializeField] float walkSpeed = 6.0f;
+    [SerializeField] float walkSpeed = 12.0f;
     [SerializeField] float gravity = -13.0f;
     [SerializeField] bool lockCursor = true;
 
@@ -30,7 +30,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateMouseLook();
+        UpdateMovement();   
     }
 
     void UpdateMouseLook() {
